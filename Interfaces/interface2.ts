@@ -20,20 +20,20 @@ function hello3(person: Person3): void {
   console.log(`안녕하세요 3번 ${person.name} 입니다.`);
 }
 
-const p31: Person3 = {
+const p3_1: Person3 = {
   name: "Mark",
   age: 30,
 };
 
-const p32: Person3 = {
+const p3_2: Person3 = {
   name: "Anna",
   systers: ["Sung", "Chan"],
 };
 
-const p33: Person3 = {
+const p3_3: Person3 = {
   name: "Bokdaengi",
-  father: p31,
-  mother: p32,
+  father: p3_1,
+  mother: p3_2,
 };
 
-hello3(p33);
+hello3(p3_3);
