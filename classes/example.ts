@@ -1,19 +1,19 @@
 class Person_c {
-  public name: string = "Mark";
-  public age!: number;
   //할당하지 않으면, undefined에러가 난다.(age!:string을사용할경우, 사용자가 할당해줘야해서 오류를 잡기 힘들다.)
   // = 생성자에서 값을 할당하지 않는 경우에 '!'를 사용한다.
 
-  public constructor(age?: number) {
-    if (age === undefined) {
-      this.age = 20;
-    } else {
-      this.age = age;
-    }
-  }
+  public constructor(public name: string, public age: number) {}
+
+  // 위에 코드랑 동일하다.
+  // name:string;
+  // age:number;
+  // public constructor( name: string, age: number) {
+  //   this.name = name;
+  //   this.age = age;
+  // }
 }
 
-const p_c1 = new Person_c(30);
+const p_c1 = new Person_c("Mark", 30);
 
 console.log(p_c1);
 
